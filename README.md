@@ -6,41 +6,41 @@ This project aims to classify diabetes using machine learning techniques. A mode
 
 The dataset used in this project was obtained from the Kaggle Diabetes Dataset, which contains patient data with various health attributes and diabetes class labels. This dataset is commonly used for research and learning in the fields of data science and machine learning.
 
-## 📊 Tahapan yang Dilakukan
+## 📊 Steps Taken
 1. Exploratory Data Analysis (EDA)
 
-- Menganalisis distribusi data
+- Analyzing data distribution
 
-- Mendeteksi missing values
+- Detecting missing values
 
-- Memahami karakteristik dan hubungan antar fitur
+- Understanding the characteristics and relationships between features
 
 2. Data Preprocessing
 
-Penanganan missing values
+- Handling missing values
 
-Encoding data kategorikal
+- Encoding categorical data
 
-Normalisasi / standarisasi fitur numerik
+- Normalizing/standardizing numerical features
 
 3. Modeling
 
-Beberapa algoritma machine learning digunakan dan dibandingkan performanya, yaitu:
+Several machine learning algorithms are used and their performance is compared, namely:
 
-Support Vector Machine (SVM)
+- Support Vector Machine (SVM)
 
-Random Forest Classifier
+- Random Forest Classifier
 
-XGBoost Classifier
+- XGBoost Classifier
 
 4. Model Evaluation
 
-Evaluasi performa model dilakukan menggunakan metrik:
+Model performance is evaluated using the following metrics:
 
-Accuracy
+- Accuracy
 
-Confusion Matrix
+- Confusion Matrix
 
-Classification Report
+- ROC Curve (Multiclass)
 
-ROC Curve (Multiclass)
+- Learning Curve

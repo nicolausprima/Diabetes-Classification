@@ -25,7 +25,7 @@ The dataset used in this project was obtained from the Kaggle Diabetes Dataset, 
 
 3. Modeling
 
-Several machine learning algorithms are used and their performance is compared, namely:
+  Several machine learning algorithms are used and their performance is compared, namely:
 
 - Support Vector Machine (SVM)
 

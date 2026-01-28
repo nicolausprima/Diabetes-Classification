@@ -19,7 +19,7 @@ The goal is to identify the best model with the highest Accuracy for each gender
 The dataset contains patient health records including physical attributes and clinical test results.
 * **Target Variable:** `Diabetes_012` (0: Non-Diabetic, 1: Pre-Diabetic, 2: Diabetic).
 * **Features:** HighBP, HighChol, BMI, Smoker, PhysicalActivity, GenHlth, Age, Sex, etc.
-* **Source:** 👉 [Click here to view my Kaggle Notebook/Dataset](https://www.kaggle.com/datasets/imtkaggleteam/diabetes)
+* **Source:** 👉 [Click here to view Kaggle Dataset](https://www.kaggle.com/datasets/imtkaggleteam/diabetes)
 
 ## 🛠️ Methodology
 

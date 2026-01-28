@@ -67,7 +67,7 @@ Model evaluation was conducted using **Accuracy** and **Confusion Matrix**. Belo
 ## 🚀 How to Run
 1.  Clone this repository:
     ```bash
-    git clone [https://github.com/your-username/diabetes-classification.git](https://github.com/your-username/diabetes-classification.git)
+    git clone [https://github.com/nicolausprima/diabetes-classification.git](https://github.com/nicolausprima/diabetes-classification.git)
     ```
 2.  Install the required libraries:
     ```bash

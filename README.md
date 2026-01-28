@@ -61,6 +61,7 @@ Model evaluation was conducted using **Accuracy** and **Confusion Matrix**. Belo
 
 ### Confusion Matrix (XGBoost) - Female 
 ![Confusion Matrix](XGBoostFemale.png)
+
 *The chart above illustrates the Confusion Matrix. It shows how well the model distinguishes between the 3 classes (Non-Diabetic, Pre-Diabetic, Diabetic), highlighting True Positives vs Misclassifications.*
 
 ## 🚀 How to Run

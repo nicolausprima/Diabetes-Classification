@@ -1,63 +1,84 @@
-# Classification-Diabetes
-Diabetes classification using SVM, Random Forest, and XGBoost with Kaggle dataset.
+# Diabetes-Classification
 
-## 🩺 Classification Diabetes
-This project aims to classify diabetes using machine learning techniques. A model was developed to predict a patient's diabetes status based on various medical features such as blood pressure, cholesterol levels, height, weight, and other health indicators.
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![Sklearn](https://img.shields.io/badge/Library-Scikit_Learn-orange?logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
+[![XGBoost](https://img.shields.io/badge/Algorithm-XGBoost-green?logo=xgboost&logoColor=white)](https://xgboost.readthedocs.io/)
+[![Kaggle](https://img.shields.io/badge/Dataset-Kaggle-20BEFF?logo=kaggle&logoColor=white)](YOUR_KAGGLE_LINK_HERE)
 
-The dataset used in this project was obtained from the Kaggle Diabetes Dataset, which contains patient data with various health attributes and diabetes class labels. This dataset is commonly used for research and learning in the fields of data science and machine learning.
+## 📌 Project Overview
+The objective of this project is to perform **Diabetes Classification** to predict a patient's health status into 3 categories: **Non-Diabetic**, **Pre-Diabetic**, or **Diabetic**.
 
-## 📊 Steps Taken
-1. Exploratory Data Analysis (EDA)
+This analysis compares the performance of three powerful Machine Learning algorithms using a unique **Gender-Based Segmentation** strategy (training separate models for Males and Females):
+1.  **Random Forest Classifier**
+2.  **XGBoost Classifier (Multiclass)**
+3.  **Support Vector Machine (SVM)**
 
-    - Analyzing data distribution
+The goal is to identify the best model with the highest Accuracy for each gender group and determine if demographic splitting improves prediction reliability.
 
-    - Detecting missing values
+## 📂 Dataset
+The dataset contains patient health records including physical attributes and clinical test results.
+* **Target Variable:** `Diabetes_012` (0: Non-Diabetic, 1: Pre-Diabetic, 2: Diabetic).
+* **Features:** HighBP, HighChol, BMI, Smoker, PhysicalActivity, GenHlth, Age, Sex, etc.
+* **Source:** 👉 [Click here to view my Kaggle Notebook/Dataset](https://www.kaggle.com/datasets/imtkaggleteam/diabetes)
 
-    - Understanding the characteristics and relationships between features
+## 🛠️ Methodology
 
-2. Data Preprocessing
+### 1. Data Preprocessing
+* **Gender Splitting:** Divided the dataset into `Male` and `Female` subsets to capture gender-specific health risk factors.
+* **Encoding:** Used `LabelEncoder` to transform multiclass target variables.
+* **Scaling:** Applied `StandardScaler` to normalize numerical features, ensuring optimal performance for margin-based algorithms like SVM.
+* **Feature Selection:** Analyzed correlation to select the most impactful health indicators.
 
-      - Handling missing values
+### 2. Models Used
+* **Random Forest:** An ensemble method utilizing multiple decision trees to handle non-linear relationships in medical data.
+* **XGBoost:** A gradient boosting framework configured with `multi:softmax` for efficient multiclass classification.
+* **SVM (Support Vector Machine):** Uses RBF kernel to find the optimal hyperplane for separating complex health classes.
 
-      - Encoding categorical data
+## 📊 Results Comparison
 
-      -  Normalizing/standardizing numerical features
+Model evaluation was conducted using **Accuracy** and **Confusion Matrix**. Below is the performance summary separated by gender:
 
-3. Modeling
+### 👨 Male Group Results
+| Model | Accuracy | Performance Analysis |
+| :--- | :--- | :--- |
+| **XGBoost** | **[0.794]** | **Best Model.** Extremely efficient in handling multiclass labels. |
+| **Random Forest** | **[0.794]** | Robust baseline performance with high stability. |
+| **SVM** | **[0.794]** | Good generalization but computationally heavier. |
 
-      Several machine learning algorithms are used and their performance is compared, namely:
+### 👩 Female Group Results
+| Model | Accuracy | Performance Analysis |
+| :--- | :--- | :--- |
+| **XGBoost** | **[0.872]** | **Top Performer.** Captures complex patterns best. |
+| **Random Forest** | **[0.872]** | Performs well, very close to XGBoost. |
+| **SVM** | **[0.829]** | Competitive accuracy for this demographic. |
 
-    - Support Vector Machine (SVM)
+> *Note: XGBoost typically outperforms other models in this dataset due to its gradient boosting technique which effectively minimizes errors in multiclass scenarios.*
 
-    - Random Forest Classifier
+## 📈 Visualizations
 
-    - XGBoost Classifier
+### Confusion Matrix (XGBoost) - Male 
+![Confusion Matrix](XGBoostMale.png)
 
-4. Model Evaluation
+### Confusion Matrix (XGBoost) - Female 
+![Confusion Matrix](XGBoostFemale.png)
+*The chart above illustrates the Confusion Matrix. It shows how well the model distinguishes between the 3 classes (Non-Diabetic, Pre-Diabetic, Diabetic), highlighting True Positives vs Misclassifications.*
 
-    Model performance is evaluated using the following metrics:
+## 🚀 How to Run
+1.  Clone this repository:
+    ```bash
+    git clone [https://github.com/your-username/diabetes-classification.git](https://github.com/your-username/diabetes-classification.git)
+    ```
+2.  Install the required libraries:
+    ```bash
+    pip install pandas numpy matplotlib seaborn scikit-learn xgboost
+    ```
+3.  Run the notebook:
+    ```bash
+    jupyter notebook Diabetes.ipynb
+    ```
 
-    - Accuracy
+## 🤝 Conclusion
+This experiment concludes that **XGBoost** (combined with gender segmentation) is the most accurate model for predicting diabetes risk. The study demonstrates that splitting data by gender allows the models to learn more specific risk patterns compared to a generic approach.
 
-    - Confusion Matrix
-
-    - ROC Curve (Multiclass)
-
-    - Learning Curve
-
-## 🎯 Project Objectives
-
-1. Build an accurate diabetes classification model.
-
-2. Compare the performance of several machine learning algorithms.
-
-3. Understand the influence of medical features on diabetes diagnosis.
-
-## 📁 Dataset
-
-Source: Kaggle – Diabetes Dataset
-
-The dataset is secondary and is used only for learning and analysis purposes.
-
-📌 Dataset link:
-https://www.kaggle.com/datasets/imtkaggleteam/diabetes
+---
+*Created by [Nicolaus Prima Dharma]*
